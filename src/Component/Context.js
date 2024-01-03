@@ -29,7 +29,20 @@ const[loding,setLoding]=useState(true)
     }
 
     useEffect(() => {
-        moviedata()
+        // moviedata()
+
+        // const timer = setTimeout(() => moviedata(),500)
+        // return () => clearTimeout(timer)
+
+        const time=setTimeout(() => {
+            moviedata()
+            
+        }, 1000);
+
+        return ()=>clearTimeout(time)
+
+
+
     }, [search])
 
 
